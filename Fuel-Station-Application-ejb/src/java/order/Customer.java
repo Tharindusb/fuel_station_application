@@ -79,8 +79,8 @@ public class Customer {
         Class.forName("com.mysql.cj.jdbc.Driver");
         System.out.println("BBBBBBBBBBBBBBBBBB");
         try {
-            String query = "INSERT INTO customer('vehicle_no', 'vehicle_type') VALUES(?, ?)";
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/fuel-station-application?useSSL=false", "root", "P@ssw0rd");
+            String query = "INSERT INTO CUSTOMER(CUSTOMER_VEHICLE_NO, CUSTOMER_VEHICLE_TYPE) VALUES(?, ?)";
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/FUEL_STATION_DB?useSSL=false", "root", "P@ssw0rd");
             if(conn.isValid(0)) {
                 out.println("connection is ready");
             } else {

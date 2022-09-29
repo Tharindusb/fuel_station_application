@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Fuel-Station-Application-ejb/Fuel-Station-Application-ejb.iml" filepath="$PROJECT_DIR$/Fuel-Station-Application-ejb/Fuel-Station-Application-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fuel-Station-Application-war/Fuel-Station-Application-war.iml" filepath="$PROJECT_DIR$/Fuel-Station-Application-war/Fuel-Station-Application-war.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/fuel_station_application.iml" filepath="$PROJECT_DIR$/.idea/fuel_station_application.iml" />
+    </modules>
+  </component>
+</project>

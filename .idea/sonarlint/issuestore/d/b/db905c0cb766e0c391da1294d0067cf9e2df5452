@@ -1,0 +1,13 @@
+
+^
+java:S2095S"HUse try-with-resources or close this "Connection" in a "finally" clause.(’éÁ—
+j
+java:S2095Y"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(öÚ¥ùÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(“×·ôşÿÿÿÿ
+œ
+java:S1186!"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ë›ÿ¦úÿÿÿÿ
+E
+java:S1172N"/Remove this unused method parameter "customer".(Ù€Ä
+V	java:S125E"<This block of commented-out lines of code should be removed.(»•ûÿÿÿÿ
+N	java:S106P"9Replace this use of System.out or System.err by a logger.(·î’
+V	java:S125\"<This block of commented-out lines of code should be removed.(“š®Èùÿÿÿÿ

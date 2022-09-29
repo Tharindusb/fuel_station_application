@@ -14,7 +14,7 @@
     <body>
         <div align="center">
             <h1>Customer Registration Form</h1>
-            <form action="FuelRequestServlet.java" method="POST">
+            <form action="FuelRequestServlet" method="POST">
                 <table style="with: 80%">
                     <tr>
                         <td>First Name</td>
