@@ -18,21 +18,24 @@
     <div
       class="w-2/3 my-5 shadow-md p-5 hover:shadow-xl transition-all duration-200 cursor-pointer bg-white rounded-md flex justify-center flex-col items-center min-w-[40]"
     >
-      <h1 class="font-semibold text-center">Type of fuel</h1>
+        <form action="homeServlet" method="POST">
+      <h1 class="font-semibold text-center" name="fuelType">PETROL 92</h1>
       <div class="flex w-full items-center justify-between mt-5">
         <p class="">Availability</p>
         <p class="font-semibold text-green-600">Amount L</p>
       </div>
       <div class="flex items-center justify-between w-full mt-4">
         <p>Price</p>
-        <p class="font-semibold text-blue-600"><span>Price</span> /L</p>
+        <p class="font-semibold text-blue-600" name="fuelPrice" ><span>450.00</span> /L</p>
       </div>
       <button
-        class="w-1/2 bg-green-600 px-3 py-1 font-semibold text-white rounded-sm mt-5 hover:bg-green-400 duration-200"
+        class="w-1/2 bg-green-600 px-3 py-1 font-semibold text-white rounded-sm mt-5 hover:bg-green-400 duration-200" 
       >
         Order
       </button>
+      </form>
     </div>
+
     
     
   </body>

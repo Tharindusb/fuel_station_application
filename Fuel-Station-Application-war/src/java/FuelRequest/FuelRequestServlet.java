@@ -32,9 +32,7 @@ public class FuelRequestServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        out.println("qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq");
-        try {
+        try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -76,21 +74,23 @@ public class FuelRequestServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        PrintWriter out = response.getWriter();
 //        processRequest(request, response);
 //        String firstName = request.getParameter("firstName");
 //        String lastName = request.getParameter("lastName");
 //        String mobile = request.getParameter("mobile");
         
         Customer customer = new Customer();
-        customer.setVehicleNo("CSS-5555");
-        customer.setVehicleType("BUS");
-        System.out.println("AAAAAAAAAAAAAAAAAAAAAAAA");
+        customer.setVehicleNo(request.getParameter("vehicleNo"));
+        customer.setVehicleType(request.getParameter("vehicleType"));
+
         
         try {
             customer.registerCustomer(customer);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(FuelRequestServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
+        response.sendRedirect("CartServlet");
     }
 
     /**

@@ -17,12 +17,12 @@
             <form action="FuelRequestServlet" method="POST">
                 <table style="with: 80%">
                     <tr>
-                        <td>First Name</td>
-                        <td><input type="text" name="firstName" /></td>
+                        <td>Vehicle No</td>
+                        <td><input type="text" name="vehicleNo" /></td>
                     </tr>
                     <tr>
-                        <td>Last Name</td>
-                        <td><input type="text" name="lastName" /></td>
+                        <td>Vehicle Type</td>
+                        <td><input type="text" name="vehicleType" /></td>
                     </tr>
                     <tr>
                         <td>Mobile</td>
@@ -31,6 +31,7 @@
                 </table>
                 <input type="submit" value="Submit" />
             </form>
+            
         </div>
     </body>
 </html>

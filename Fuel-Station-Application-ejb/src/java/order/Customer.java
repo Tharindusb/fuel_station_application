@@ -77,18 +77,18 @@ public class Customer {
     
     public void registerCustomer(Customer customer) throws ClassNotFoundException {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        System.out.println("BBBBBBBBBBBBBBBBBB");
+//        System.out.println("BBBBBBBBBBBBBBBBBB");
         try {
             String query = "INSERT INTO CUSTOMER(CUSTOMER_VEHICLE_NO, CUSTOMER_VEHICLE_TYPE) VALUES(?, ?)";
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/FUEL_STATION_DB?useSSL=false", "root", "P@ssw0rd");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/FUEL_STATION_DB?useSSL=false", "root", "Password123#@!");
             if(conn.isValid(0)) {
                 out.println("connection is ready");
             } else {
                 out.println("connection is not ready");
             }
             PreparedStatement ps = conn.prepareStatement(query);
-            ps.setString(1, "CZZ-5555"); 
-            ps.setString(2, "CAR");
+            ps.setString(1, customer.getVehicleNo()); 
+            ps.setString(2, customer.getVehicleType());
 //            ps.setString(2, student.getLastName());
             int i = ps.executeUpdate(); 
             if(i > 0) { 
