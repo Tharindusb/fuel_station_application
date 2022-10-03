@@ -26,14 +26,11 @@ public class FuelRequestServlet extends HttpServlet {
 
     @EJB
     private Customer customer;
-
-    
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        out.println("qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq");
         try {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
@@ -80,14 +77,13 @@ public class FuelRequestServlet extends HttpServlet {
 //        String firstName = request.getParameter("firstName");
 //        String lastName = request.getParameter("lastName");
 //        String mobile = request.getParameter("mobile");
-        
-        Customer customer = new Customer();
         customer.setVehicleNo("CSS-5555");
         customer.setVehicleType("BUS");
         System.out.println("AAAAAAAAAAAAAAAAAAAAAAAA");
         
         try {
-            customer.registerCustomer(customer);
+//            customer.registerCustomer(customer);
+            customer.getCustomerByVehicleNo("CZZ-5555");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(FuelRequestServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
