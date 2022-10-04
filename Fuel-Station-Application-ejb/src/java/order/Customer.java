@@ -130,6 +130,34 @@ public class Customer implements Serializable{
         return null;
     }
     
+    public void updateOrder(Order order) throws ClassNotFoundException {
+        if (validateCustomer(customer)) {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            try {
+                String query = "INSERT INTO CUSTOMER(CUSTOMER_VEHICLE_NO, CUSTOMER_VEHICLE_TYPE) VALUES(?, ?)";
+                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/FUEL_STATION_DB?useSSL=false", "root", "P@ssw0rd");
+                if(conn.isValid(0)) {
+                    out.println("connection is ready");
+                } else {
+                    out.println("connection is not ready");
+                }
+                PreparedStatement ps = conn.prepareStatement(query);
+                ps.setString(1, customer.vehicleNo); 
+                ps.setString(2, customer.vehicleType);
+                int i = ps.executeUpdate(); 
+                if(i > 0) { 
+                    out.println("Customer sucessfully register");
+                } else {
+                    out.println("There is a error");
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+//            "Invalid customer"
+        }        
+    }
+    
     private boolean validateCustomer(Customer customer) {
         if (customer == null) {
             return false;
